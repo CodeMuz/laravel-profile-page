@@ -7,7 +7,7 @@
     <div class="panel panel-default work-panel">
         <div class="panel-body">
 
-            <h1>Work and Experience</h1>
+            <h1>Professional work and experience</h1>
 
             <h2>Captive Health</h2>
             <span class="date">2013 - 2016</span>
@@ -40,7 +40,7 @@
                 conclusions about the results and the resources needed to mitigate the spread of the tropical disease,
                 view <a href="https://github.com/CodeMuz/mapgen" target="_blank">source</a> on GitHub.</p>
 
-            <h1>Projects</h1>
+            <h1>Personal projects</h1>
 
             <h2>Festival Joy</h2>
             <span class="date">2015 - current</span>
@@ -56,7 +56,7 @@
             <h2>Advent of code</h2>
             <span class="date">December 2015</span>
 
-            <p>Over christmas I decided to get invovled with Eric Wastl's Advent of Code game as an excuse to learn some
+            <p>Over christmas I decided to get involed with Eric Wastl's Advent of Code game as an excuse to learn some
                 new
                 languages, particularly python. Its very addictive to find all the ways to solve a problem, so far I've
                 completed 19/25; you can view my solutions <a
