@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6c71658d3842cebc73c5abc9b6e6b82c",
-    "content-hash": "a1a2e68af5f5f3fcbe1d5681a951e8be",
+    "hash": "857cc1db9bbf9560c2503c750496e063",
+    "content-hash": "1c266d9b9e7eee52dc4183b5688a629b",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -733,6 +733,91 @@
                 "uri"
             ],
             "time": "2016-04-13 19:56:01"
+        },
+        {
+            "name": "intouch/laravel-newrelic",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/In-Touch/laravel-newrelic.git",
+                "reference": "24a6c025c1169afb1863593bd7f2a9bb9de5b233"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/In-Touch/laravel-newrelic/zipball/24a6c025c1169afb1863593bd7f2a9bb9de5b233",
+                "reference": "24a6c025c1169afb1863593bd7f2a9bb9de5b233",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "intouch/newrelic": ">=1.0.2",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intouch\\LaravelNewrelic": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Leckey",
+                    "email": "pleckey@intouchinsight.com"
+                }
+            ],
+            "description": "Laravel 5 NewRelic Integration",
+            "homepage": "https://github.com/In-Touch/laravel-newrelic",
+            "keywords": [
+                "laravel",
+                "new relic",
+                "newrelic"
+            ],
+            "time": "2016-05-05 12:30:20"
+        },
+        {
+            "name": "intouch/newrelic",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/In-Touch/newrelic.git",
+                "reference": "20db6cb25a9eb88e504e16829077c56828c176cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/In-Touch/newrelic/zipball/20db6cb25a9eb88e504e16829077c56828c176cc",
+                "reference": "20db6cb25a9eb88e504e16829077c56828c176cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Intouch\\Newrelic": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache 2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Leckey",
+                    "email": "pleckey@intouchinsight.com"
+                }
+            ],
+            "description": "Namespaced Wrapper for NewRelic PHP Agent",
+            "homepage": "http://github.com/In-Touch/newrelic/",
+            "keywords": [
+                "new relic",
+                "newrelic"
+            ],
+            "time": "2014-08-18 12:08:45"
         },
         {
             "name": "jakub-onderka/php-console-color",
