@@ -21,7 +21,7 @@
             </p>
 
             <p>I studied Computer Science and Mathematics at Bristol University and was awarded an MSc in Advanced
-                Computing.</p>
+                Computing (Internet Technologies with Security)</p>
 
             <p>I'm passionate about all things digital and how they can be used to benefit society.</p>
 
@@ -54,7 +54,7 @@
                 remember reading <a target="_blank"
                                     href="https://www.goodreads.com/user/show/43312599-murray-wynnes">here</a>.</p>
 
-            <p><a target="_blank" href="http://bit.ly/mwynnescv" class="btn btn-success" id="resume-dwnld"
+            <p><a target="_blank" href="http://bit.ly/murray_cv" class="btn btn-success" id="resume-dwnld"
                   role="button"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Download my resume</a></p>
 
 
