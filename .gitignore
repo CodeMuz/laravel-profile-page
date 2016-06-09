@@ -6,4 +6,3 @@ Homestead.json
 .env
 /public/build/
 !rev-manifest.json
-/public/css/
