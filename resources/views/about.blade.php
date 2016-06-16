@@ -77,25 +77,6 @@
 
             </div>
 
-            <h1>Technical Skills</h1>
-
-            <div class="skill-bars">
-
-                @foreach ($skills as $skill)
-                    <span>{{ $skill->name }}</span>
-
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar"
-                             aria-valuenow="{{ $skill->value }}"
-                             aria-valuemin="0"
-                             aria-valuemax="100" style="width:{{ $skill->value }}%">
-                            <span class="sr-only">{{ $skill->value }}% Complete</span>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-
         </section>
 
 
@@ -104,8 +85,8 @@
             <h1>This website</h1>
 
             <p>This website was built using PHP, HTML5, SCSS and JQuery. For the framework I'm using <a
-                        target="_blank" href="https://laravel.com/">Laravel</a> and for a responsive layout
-                I'm using <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>. The site is
+                        target="_blank" href="https://laravel.com/">Laravel 5.2</a> and for a responsive layout
+                I'm using <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.3.6</a>. The site is
                 built and packaged with <a
                         target="_blank"
                         href="http://gulpjs.com/">Gulp</a> using <a href="https://laravel.com/docs/5.0/elixir"
