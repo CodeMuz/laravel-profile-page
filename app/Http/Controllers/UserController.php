@@ -9,8 +9,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use GuzzleHttp\Client;
 
-class UserController extends Controller
-{
+class UserController extends Controller {
+
     /**
      * Send an e-mail contact to the host.
      *
@@ -21,10 +21,10 @@ class UserController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'name' => 'required|max:255',
-            'email' => 'required|max:255',
+            'name'    => 'required|max:255',
+            'email'   => 'required|max:255',
             'subject' => 'required|max:255',
-            'message' => 'required|max:255'
+            'message' => 'required|max:1000'
         ]);
 
         if ($validator->fails()) {
@@ -36,7 +36,7 @@ class UserController extends Controller
         $client = new Client();
         $res = $client->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
             'form_params' => [
-                'secret' => env('NOCAPTCHA_SECRET'),
+                'secret'   => env('NOCAPTCHA_SECRET'),
                 'response' => $_POST['g-recaptcha-response']
             ]
         ]);
