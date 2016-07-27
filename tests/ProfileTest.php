@@ -3,9 +3,19 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Support\Facades\Artisan;
 
 class ProfileTest extends TestCase
 {
+
+    public function setUp(){
+
+        parent::setUp();
+
+        Artisan::call('migrate');
+
+    }
+
     /**
      * A basic functional test example.
      *
