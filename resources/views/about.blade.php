@@ -54,6 +54,10 @@
                 remember reading <a target="_blank"
                                     href="https://www.goodreads.com/user/show/43312599-murray-wynnes">here</a>.</p>
 
+            <p>I've also recently started <a target="_blank"
+                                             href="https://blog.murraywynnes.com">blogging</a> and you can find me over on <a target="_blank"
+                                                                                                                              href="https://laracasts.com/@murrayw">laracasts</a> refining skills.</p>
+
             <p><a download href="http://bit.ly/murray_cv" class="btn btn-success" id="resume-dwnld"
                   role="button"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Download my resume</a></p>
 
