@@ -24,7 +24,7 @@ class UserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|max:255',
             'subject' => 'required|max:255',
-            'message' => 'required|max:255'
+            'message' => 'required|max:1000'
         ]);
 
         if ($validator->fails()) {
@@ -33,41 +33,44 @@ class UserController extends Controller
                 ->withErrors($validator);
         }
 
-        $client = new Client();
-        $res = $client->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
-            'form_params' => [
-                'secret' => env('NOCAPTCHA_SECRET'),
-                'response' => $_POST['g-recaptcha-response']
-            ]
-        ]);
+        if(getenv('APP_ENV') != 'testing'){
 
-        if ($res->getStatusCode() == 200) {
+            $client = new Client();
+            $res = $client->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
+                'form_params' => [
+                    'secret' => env('NOCAPTCHA_SECRET'),
+                    'response' => $_POST['g-recaptcha-response']
+                ]
+            ]);
 
-            $result = json_decode($res->getBody());
+            if ($res->getStatusCode() == 200) {
 
-            //Send Email if check is ok
-            if ($result->success == true) {
+                $result = json_decode($res->getBody());
 
-                $email = new \stdClass();
-                $email->name = $request->name;
-                $email->from = $request->email;
-                $email->subject = $request->subject;
-                $email->message = $request->message;
+                //Send Email if check is ok
+                if ($result->success == true) {
 
-                Mail::send('emails.contact_email', ['body' => $email->message], function ($m) use ($email) {
+                    $email = new \stdClass();
+                    $email->name = $request->name;
+                    $email->from = $request->email;
+                    $email->subject = $request->subject;
+                    $email->message = $request->message;
 
-                    $m->from($email->from, $email->name);
+                    Mail::send('emails.contact_email', ['body' => $email->message], function ($m) use ($email) {
 
-                    //Not needed. All email is routing to app owner via config/mail.php
-                    //$m->to('mrwynnes@gmail.com', $email->name);
+                        $m->from($email->from, $email->name);
 
-                    $m->subject($email->subject);
-                });
+                        //Not needed. All email is routing to app owner via config/mail.php
+                        //$m->to('mrwynnes@gmail.com', $email->name);
 
-                $request->session()->flash('alert-success', 'Your message has been sent successfully!');
+                        $m->subject($email->subject);
+                    });
 
-            } else {
-                $request->session()->flash('alert-danger', 'CAPTCHA was entered incorrectly');
+                    $request->session()->flash('alert-success', 'Your message has been sent successfully!');
+
+                } else {
+                    $request->session()->flash('alert-danger', 'CAPTCHA was entered incorrectly');
+                }
             }
         }
 

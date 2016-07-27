@@ -55,7 +55,7 @@
                         <div class="g-recaptcha" data-sitekey="6LcczSATAAAAABDkeUaqRqQ1b230BKU0Ik_2Y85X"></div>
                     </div>
 
-                    <button type="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane fa-3x"
+                    <button type="submit" id="submit" class="btn btn-success btn-block"><i class="fa fa-paper-plane fa-3x"
                                                                                aria-hidden="true"></i></button>
 
                 </form>
