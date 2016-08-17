@@ -14,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+
+        $this->app['request']->server->set('HTTPS', $this->app->environment() != 'local');
+
         Blade::directive('progressbary', function($arguments) {
 
             list($label, $value) = explode(',',str_replace(['(',')',' ', "'"], '', $arguments));
