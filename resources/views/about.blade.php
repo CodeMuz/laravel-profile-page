@@ -62,24 +62,24 @@
                   role="button"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Download my resume</a></p>
 
 
-            <h1>Competences</h1>
+            {{--<h1>Competences</h1>--}}
 
-            <div class="skill-bars">
+            {{--<div class="skill-bars">--}}
 
-                @foreach ($compentency as $skill)
-                    <span>{{ $skill->name }}</span>
+                {{--@foreach ($compentency as $skill)--}}
+                    {{--<span>{{ $skill->name }}</span>--}}
 
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-info" role="progressbar"
-                             aria-valuenow="{{ $skill->value }}"
-                             aria-valuemin="0"
-                             aria-valuemax="100" style="width:{{ $skill->value }}%">
-                            <span class="sr-only">{{ $skill->value }}% Complete</span>
-                        </div>
-                    </div>
-                @endforeach
+                    {{--<div class="progress">--}}
+                        {{--<div class="progress-bar progress-bar-info" role="progressbar"--}}
+                             {{--aria-valuenow="{{ $skill->value }}"--}}
+                             {{--aria-valuemin="0"--}}
+                             {{--aria-valuemax="100" style="width:{{ $skill->value }}%">--}}
+                            {{--<span class="sr-only">{{ $skill->value }}% Complete</span>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--@endforeach--}}
 
-            </div>
+            {{--</div>--}}
 
         </section>
 
